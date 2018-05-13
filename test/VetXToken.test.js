@@ -72,7 +72,7 @@ contract('VetXToken', function (accounts) {
     ).should.be.rejectedWith(EVMRevert)
   })
 
-  describe('validating allowance updates to spender', function () {
+  describe('Validating allowance updates to spender', function () {
     let preApproved
 
     it('should start with zero', async function () {
@@ -485,7 +485,7 @@ contract('VetXToken', function (accounts) {
     })
   })
 
-  describe('should fail when paused', function () {
+  describe('All transactional operations should fail when paused', function () {
     it('should fail when transfer', async function () {
       await token.pause()
       await token.transfer(accounts[1], 10).should.be.rejectedWith(EVMRevert)
