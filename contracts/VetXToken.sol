@@ -2,6 +2,7 @@ pragma solidity ^0.4.21;
 
 import "openzeppelin-solidity/contracts/token/ERC827/ERC827Token.sol";
 import "openzeppelin-solidity/contracts/lifecycle/Pausable.sol";
+import "openzeppelin-solidity/contracts/math/SafeMath.sol";
 
 contract VetXToken is ERC827Token, Pausable {
 
